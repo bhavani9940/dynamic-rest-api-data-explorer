@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic API Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Dynamic API Explorer</h1>
+    <p>Task 5 - RESTful API Client</p>
+</header>
+
+<main>
+
+    <section class="controls">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search posts..."
+            aria-label="Search posts"
+        >
+
+        <select id="userFilter" aria-label="Filter by user">
+            <option value="all">All Users</option>
+        </select>
+
+        <button id="refreshButton">Refresh Data</button>
+    </section>
+
+    <div id="loadingMessage" class="message" hidden>
+        Loading live data...
+    </div>
+
+    <div id="errorMessage" class="error" hidden></div>
+
+    <section class="stats">
+        <div>
+            <strong id="totalCount">0</strong>
+            <span>Total Posts</span>
+        </div>
+
+        <div>
+            <strong id="visibleCount">0</strong>
+            <span>Visible Posts</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Posts</h2>
+        <p id="resultText">0 results</p>
+
+        <div id="postContainer" class="post-grid"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Dynamic JavaScript DOM Logic & RESTful API Client</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
